@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    image: pyocr_${ENV}:latest
+    build: ./containers/pyocr
+    env_file:
+      - .env.${ENV}
